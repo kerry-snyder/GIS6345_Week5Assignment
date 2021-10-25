@@ -22,7 +22,7 @@ df.plot.barh(x ='Date', y='Distance Traveled (km)', rot=0)
 #Reads a csv file filtered down to one day of birding 
 birds = pd.read_csv("MyEBirdData_Filtered.csv")
 
-#Plot of the number of times each bird (by common name) was seen that day
+#Plot of the number of species individuals (by common name) was seen one one day
 df = pd.DataFrame(birds)
 df['Common Name'].value_counts().plot(kind='bar')
 
