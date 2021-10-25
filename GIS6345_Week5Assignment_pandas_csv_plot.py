@@ -1,5 +1,3 @@
-pip install pandas
-
 import pandas as pd
 
 #Read the csv file containing eBird data
@@ -13,7 +11,7 @@ DataFrame.head(10)
 df = pd.DataFrame(birds)
 df['Common Name'].value_counts().plot(kind='bar')
 
-#Plot of the the number of lists that come from each U.S. county represented
+#Plot of the number of lists that come from each U.S. County represented
 df = pd.DataFrame(birds)
 df['County'].value_counts().plot(kind='bar')
 
@@ -24,10 +22,10 @@ df.plot.barh(x ='Date', y='Distance Traveled (km)', rot=0)
 #Reads a csv file filtered down to one day of birding 
 birds = pd.read_csv("MyEBirdData_Filtered.csv")
 
-#Plots the number of times each bird (by common name) was seen that day
+#Plot of the number of times each bird (by common name) was seen that day
 df = pd.DataFrame(birds)
 df['Common Name'].value_counts().plot(kind='bar')
 
-#Plots the distance traveled for the eBird lists in which each bird (by common name) was seen
+#Plot of the distance traveled for the eBird lists in which each bird (by common name) was seen
 df = pd.DataFrame(birds)
 df.plot.barh(x ='Common Name', y='Distance Traveled (km)', rot=0)
